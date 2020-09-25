@@ -1,0 +1,13 @@
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int          | NO   | PRI | NULL    | auto_increment |
+| tarefa      | varchar(200) | NO   |     | NULL    |                |
+| urgente     | varchar(45)  | YES  |     | NULL    |                |
+| date        | date         | YES  |     | NULL    |                |
+| encarregado | varchar(45)  | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+
+CREATE DATABASE meus_dados;
+USE meus_dados;
+CREATE TABLE Tarefas(   id         INT           NOT NULL  AUTO_INCREMENT,   tarefa       VARCHAR(200)   NOT NULL,   urgente       VARCHAR(45),   date DATE, encarregado       VARCHAR(45)   ,   PRIMARY KEY (ID));
