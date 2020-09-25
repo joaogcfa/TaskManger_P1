@@ -46,7 +46,7 @@ public class remove extends HttpServlet {
 			dao = new DAO();
 		
 		dao.remove(Integer.valueOf(request.getParameter("id")));
-		RequestDispatcher dispatcher = request.getRequestDispatcher("lista.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/lista.jsp");
 		dispatcher.forward(request, response);
 		dao.close();
 		} catch (ClassNotFoundException e) {

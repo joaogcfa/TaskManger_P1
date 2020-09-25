@@ -34,7 +34,7 @@ public class Atualiza extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher dispatcher = request.getRequestDispatcher("atualiza.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/atualiza.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -63,7 +63,7 @@ public class Atualiza extends HttpServlet {
 			}	
 		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("lista.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/lista.jsp");
 		dao.atualiza(tarefa);
 		dispatcher.forward(request, response);
 		dao.close();

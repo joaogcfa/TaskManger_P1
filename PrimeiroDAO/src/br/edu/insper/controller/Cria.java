@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -76,7 +77,8 @@ public class Cria extends HttpServlet {
 		dao.adiciona(tarefa);
 		
 		dao.close();
-		response.sendRedirect("lista.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/lista.jsp");
+		dispatcher.forward(request, response);
 		
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
